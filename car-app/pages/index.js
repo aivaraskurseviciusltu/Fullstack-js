@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className={styles.background}>
       <Head>
         <title>fullstack-app</title>
         <link rel="icon" href="/favicon.ico" />
@@ -14,7 +14,19 @@ export default function Home() {
         <h1 className={styles.title}>
           Click <Link href="/cars">here</Link> if you want to see all of my Audi Cars
         </h1>
-        </main>
+      </main>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   )
 }
