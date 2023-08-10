@@ -24,10 +24,10 @@ export default function CarsList({cars}) {
 
   export async function getStaticProps() {
 
-    const req = await fetch('http://localhost:3000/cars.json')
-    const data = await req.json()
+    const getCars = await fetch('http://localhost:3000/cars.json')
+    const cars = await getCars.json()
 
     return {
-        props: { cars: data },
+        props: { cars },
     }
 }

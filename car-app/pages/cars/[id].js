@@ -51,13 +51,12 @@ export default function Car({ car, info }) {
 }
 
 export async function getServerSideProps({ params }) {
-    const req = await fetch(`http://localhost:3000/${params.id}.json`)
-    const car = await req.json()
-    // ymtnPWI4pJ85TwO1+rQ6ag==JRgakmHTPBnHalNs
-    const req2 = await fetch(`https://api.api-ninjas.com/v1/cars?limit=2&model=${car.model}`, {headers: {
+    const getCar = await fetch(`http://localhost:3000/${params.id}.json`)
+    const car = await getCar.json()
+    const getInfo = await fetch(`https://api.api-ninjas.com/v1/cars?limit=2&model=${car.model}`, {headers: {
         'X-Api-Key' : 'ymtnPWI4pJ85TwO1+rQ6ag==JRgakmHTPBnHalNs'
     }} );
-    const info = await req2.json()
+    const info = await getInfo.json()
     return {
         props: { car, info }
     }
