@@ -33,7 +33,6 @@ export default function Car({ car, info }) {
                 <h1 className={styles.title}>
                     {car.name} {car.model}
                 </h1>
-                {console.log(info)}
                 {isLoading ? <p>...Loading image</p> : <div>
                     <img src={img} width="500px" />
                     <h1>Information</h1>
